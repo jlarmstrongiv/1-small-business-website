@@ -1,8 +1,14 @@
+* {
+  box-sizing: border-box;
+}
 html,
 body {
-  height: 100%;
+  min-height: 100%;
 }
-
+body > div {
+  min-height: 100vh;
+  position: relative;
+}
 body {
   background-color: $background;
   position: relative;
@@ -11,6 +17,7 @@ header {
   height: 70px;
   position: relative;
   background-color: $navigation-background;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, .3);
   .logo {
     position: absolute;
     left: 0;
@@ -47,6 +54,17 @@ header {
   }
 }
 main {
+}
+footer {
+  padding: 30px;
+  background-color: #2B2F26;
+  color: #FCF8DF;
+  margin-top: 7px;
+  font: 400 16px "Merriweather", serif;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 %clearfix:after {
    content: ".";
