@@ -22,7 +22,7 @@ header {
     position: absolute;
     left: 0;
     top: 0;
-    padding: 10px;
+    margin: 10px;
     width: 50px;
     height: 50px;
     float: left; }
@@ -50,7 +50,9 @@ footer {
   background-color: #2B2F26;
   color: #FCF8DF;
   margin-top: 7px;
-  font: 400 16px "Merriweather", serif;
+  font: 400 16px "Merriweather", serif; }
+
+#home footer {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -111,6 +113,21 @@ h2 {
   .gallery .flex-basis-2 {
     flex-basis: 40%;
     flex-grow: 2; }
+
+.community {
+  overflow: hidden; }
+  .community table {
+    font: 400 16px "Merriweather", serif;
+    border-spacing: 0;
+    border-collapse: collapse; }
+    .community table td, .community table th {
+      border: 1px solid #000000;
+      border-spacing: collapse;
+      padding: 22px; }
+    .community table th {
+      font-weight: 400; }
+    .community table tr:nth-child(even) {
+      background-color: #F2EADC; }
 
 #newsletter .full-page-background {
   z-index: -1;
