@@ -1,0 +1,49 @@
+#newsletter {
+  .full-page-background {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    object-fit: cover;
+  }
+  .email-newsletter {
+    background-color: $navigation-background;
+    max-width: 610px;
+    padding: 30px;
+    margin: 0 auto;
+    margin-top: 200px;
+    text-align: center;
+    h1 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 26px;
+    }
+    input {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid $input-border-bottom;
+      margin-bottom: 26px;
+      font-size: 16px;
+      padding-bottom: 8px;
+      &:focus {
+        border-bottom: 1px solid $input-border-bottom-focus;
+      }
+    }
+    button {
+      background-color: $button-background;
+      color: $button-text;
+      padding: 18px 32px;
+      border: none;
+      &:hover {
+        background-color:       $button-background-hover;
+        color: $button-text-hover;
+      }
+    }
+  }
+}

@@ -1,10 +1,85 @@
+html,
+body {
+  height: 100%; }
+
+body {
+  background-color: #F2F1E8;
+  position: relative; }
+
 header {
+  height: 70px;
+  position: relative;
   background-color: #FFFFFF; }
-  header a {
-    color: #2B2F26; }
+  header .logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    float: left; }
+  header nav ul {
+    width: 100%;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center; }
+  header nav li {
+    padding: 25px;
+    list-style: none;
+    display: inline-block; }
+  header nav a {
+    color: #2B2F26;
+    text-transform: uppercase;
+    font: 16px "Roboto", sans-serif; }
+    header nav a:hover {
+      color: #CD5D67; }
+    header nav a.nav-active {
+      color: #968772; }
 
 h1 {
   font: 400 56px "Merriweather", serif; }
 
 h2 {
   font: 400 32px "Merriweather", serif; }
+
+#newsletter .full-page-background {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  object-fit: cover; }
+
+#newsletter .email-newsletter {
+  background-color: #FFFFFF;
+  max-width: 610px;
+  padding: 30px;
+  margin: 0 auto;
+  margin-top: 200px;
+  text-align: center; }
+  #newsletter .email-newsletter h1 {
+    font-size: 30px; }
+  #newsletter .email-newsletter p {
+    font-size: 26px; }
+  #newsletter .email-newsletter input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #968772;
+    margin-bottom: 26px;
+    font-size: 16px;
+    padding-bottom: 8px; }
+    #newsletter .email-newsletter input:focus {
+      border-bottom: 1px solid #967343; }
+  #newsletter .email-newsletter button {
+    background-color: #968772;
+    color: #F2F1E8;
+    padding: 18px 32px;
+    border: none; }
+    #newsletter .email-newsletter button:hover {
+      background-color: #967343;
+      color: #FFFFFF; }
