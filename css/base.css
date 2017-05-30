@@ -1,9 +1,14 @@
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  transition: all .2s ease; }
 
 html,
 body {
   min-height: 100%; }
+
+a,
+button {
+  cursor: pointer; }
 
 body > div {
   min-height: 100vh; }
