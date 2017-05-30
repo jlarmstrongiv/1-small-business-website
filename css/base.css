@@ -12,8 +12,18 @@ body {
   position: relative;
   background-color: #F2F1E8; }
 
+#home,
+#about,
+#newsletter {
+  padding-top: 70px; }
+
 header {
-  position: relative;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
   height: 70px;
   background-color: #FFFFFF;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); }
@@ -200,17 +210,21 @@ aside.left {
   max-height: 610px;
   object-fit: cover; }
 
-#newsletter .email-newsletter {
-  max-width: 610px;
-  margin: 0 auto;
-  margin-top: 50px;
-  padding: 30px;
-  text-align: center;
-  background-color: #FFFFFF; }
-  #newsletter .email-newsletter h1 {
-    font-size: 30px; }
-  #newsletter .email-newsletter p {
-    font-size: 26px; }
+#newsletter main {
+  display: flex;
+  height: calc(100vh - 70px);
+  flex-flow: column wrap;
+  justify-content: center; }
+  #newsletter main .email-newsletter {
+    max-width: 610px;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+    background-color: #FFFFFF; }
+    #newsletter main .email-newsletter h1 {
+      font-size: 30px; }
+    #newsletter main .email-newsletter p {
+      font-size: 26px; }
 
 input {
   font-size: 16px;

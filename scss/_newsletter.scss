@@ -12,18 +12,23 @@
     max-height: 610px;
     object-fit: cover;
   }
-  .email-newsletter {
-    max-width: 610px;
-    margin: 0 auto;
-    margin-top: 50px;
-    padding: 30px;
-    text-align: center;
-    background-color: $navigation-background;
-    h1 {
-      font-size: 30px;
-    }
-    p {
-      font-size: 26px;
+  main {
+    display: flex;
+    height: calc(100vh - 70px);
+    flex-flow: column wrap;
+    justify-content: center;
+    .email-newsletter {
+      max-width: 610px;
+      margin: 0 auto;
+      padding: 30px;
+      text-align: center;
+      background-color: $navigation-background;
+      h1 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 26px;
+      }
     }
   }
 }
