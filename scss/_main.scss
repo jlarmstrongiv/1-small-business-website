@@ -7,73 +7,69 @@ body {
 }
 body > div {
   min-height: 100vh;
-  position: relative;
 }
 body {
-  background-color: $background;
   position: relative;
+  background-color: $background;
 }
 header {
-  height: 70px;
   position: relative;
+  height: 70px;
   background-color: $navigation-background;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, .3);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .3);
   .logo {
     position: absolute;
-    left: 0;
     top: 0;
-    margin: 10px;
+    left: 0;
+    float: left;
     width: 50px;
     height: 50px;
-    float: left;
+    margin: 10px;
   }
   nav {
     ul {
-      width: 100%;
       display: inline-block;
+      width: 100%;
       margin: 0 auto;
       padding: 0;
       text-align: center;
     }
     li {
+      display: inline-block;
       padding: 25px;
       list-style: none;
-      display: inline-block;
     }
     a {
-      color: $navigation-text;
+      font: 16px 'Roboto', sans-serif;
       text-transform: uppercase;
-      font: 16px "Roboto", sans-serif;
+      color: $navigation-text;
       &:hover {
         color: $navigation-text-hover;
       }
       &.nav-active {
-        color: $navigation-text-active
+        color: $navigation-text-active;
       }
     }
   }
 }
-main {
-}
 footer {
+  font: 400 16px 'Merriweather', serif;
   padding: 30px;
-  background-color: #2B2F26;
-  color: #FCF8DF;
-  margin-top: 7px;
-  font: 400 16px "Merriweather", serif;
+  color: #fcf8df;
+  background-color: #2b2f26;
 }
 #home footer {
-  position: absolute;
+  position: relative;
+  right: 0;
   bottom: 0;
   left: 0;
-  right: 0;
 }
-%clearfix:after {
-   content: ".";
-   visibility: hidden;
-   display: block;
-   height: 0;
-   clear: both;
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  content: '.';
 }
 %clearfloat {
   clear: both;

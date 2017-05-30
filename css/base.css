@@ -6,63 +6,68 @@ body {
   min-height: 100%; }
 
 body > div {
-  min-height: 100vh;
-  position: relative; }
+  min-height: 100vh; }
 
 body {
-  background-color: #F2F1E8;
-  position: relative; }
+  position: relative;
+  background-color: #F2F1E8; }
 
 header {
-  height: 70px;
   position: relative;
+  height: 70px;
   background-color: #FFFFFF;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3); }
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); }
   header .logo {
     position: absolute;
-    left: 0;
     top: 0;
-    margin: 10px;
+    left: 0;
+    float: left;
     width: 50px;
     height: 50px;
-    float: left; }
+    margin: 10px; }
   header nav ul {
-    width: 100%;
     display: inline-block;
+    width: 100%;
     margin: 0 auto;
     padding: 0;
     text-align: center; }
   header nav li {
+    display: inline-block;
     padding: 25px;
-    list-style: none;
-    display: inline-block; }
+    list-style: none; }
   header nav a {
-    color: #2B2F26;
+    font: 16px 'Roboto', sans-serif;
     text-transform: uppercase;
-    font: 16px "Roboto", sans-serif; }
+    color: #2B2F26; }
     header nav a:hover {
       color: #CD5D67; }
     header nav a.nav-active {
       color: #968772; }
 
 footer {
+  font: 400 16px 'Merriweather', serif;
   padding: 30px;
-  background-color: #2B2F26;
-  color: #FCF8DF;
-  margin-top: 7px;
-  font: 400 16px "Merriweather", serif; }
+  color: #fcf8df;
+  background-color: #2b2f26; }
 
 #home footer {
-  position: absolute;
+  position: relative;
+  right: 0;
   bottom: 0;
-  left: 0;
-  right: 0; }
+  left: 0; }
+
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  content: '.'; }
 
 h1 {
-  font: 400 56px "Merriweather", serif; }
+  font: 400 56px 'Merriweather', serif; }
 
 h2 {
-  font: 400 32px "Merriweather", serif; }
+  font: 400 32px 'Merriweather', serif; }
 
 #home h1,
 #home h2 {
@@ -76,23 +81,28 @@ h2 {
 
 .gallery {
   display: flex;
+  padding: 7px;
   flex-flow: column wrap; }
   .gallery .row-1 {
     max-height: 370px; }
   .gallery .row-2 {
-    max-height: 240px;
-    margin-bottom: 85px; }
+    max-height: 240px; }
   .gallery .row-1,
   .gallery .row-2 {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between; }
+    flex-flow: row nowrap; }
+    .gallery .row-1 .flex-2,
+    .gallery .row-2 .flex-2 {
+      flex-grow: 2; }
+    .gallery .row-1 .flex-3,
+    .gallery .row-2 .flex-3 {
+      flex-grow: 3; }
     .gallery .row-1 figure,
     .gallery .row-2 figure {
-      flex-basis: 20%;
       position: relative;
-      margin: 7px;
-      overflow: hidden; }
+      overflow: hidden;
+      flex: 0 1 calc(20% - 14px);
+      margin: 7px; }
       .gallery .row-1 figure img,
       .gallery .row-2 figure img {
         width: 100%;
@@ -100,74 +110,123 @@ h2 {
         object-fit: cover; }
       .gallery .row-1 figure figcaption,
       .gallery .row-2 figure figcaption {
+        font: 400 16px 'Merriweather', serif;
         position: absolute;
         bottom: 16px;
         left: 0;
-        background-color: #2B2F26;
-        color: #FCF8DF;
-        font: 400 16px "Merriweather", serif;
-        padding: 20px; }
-  .gallery .flex-basis-3 {
-    flex-basis: 60%;
-    flex-grow: 3; }
-  .gallery .flex-basis-2 {
-    flex-basis: 40%;
-    flex-grow: 2; }
+        padding: 20px;
+        color: #fcf8df;
+        background-color: #2b2f26; }
+
+aside {
+  width: 160px; }
+  aside img {
+    max-width: 100%; }
+
+aside.right {
+  float: right;
+  margin: 0 0 20px 20px; }
+
+aside.left {
+  float: left;
+  margin: 0 20px 0 0; }
 
 .community {
-  overflow: hidden; }
+  max-width: 700px;
+  margin: 0 auto; }
+  .community h1,
+  .community h2 {
+    text-align: center; }
+  .community h2 {
+    font-size: 28px;
+    font-weight: 200;
+    text-align: left; }
+  .community p {
+    font-size: 20px;
+    line-height: 175%; }
+  .community aside p {
+    font-size: 16px;
+    line-height: 145%; }
+  .community blockquote {
+    font-style: italic;
+    font-size: 18px;
+    line-height: 175%;
+    margin: 0;
+    padding-left: 30px;
+    border-left: 1px solid #968772; }
+  .community a {
+    color: #968772; }
+    .community a:hover {
+      color: #967343; }
   .community table {
-    font: 400 16px "Merriweather", serif;
+    font: 400 16px 'Merriweather', serif;
+    width: 100%;
+    margin-bottom: 60px;
     border-spacing: 0;
     border-collapse: collapse; }
-    .community table td, .community table th {
-      border: 1px solid #000000;
+    .community table td,
+    .community table th {
+      padding: 22px;
       border-spacing: collapse;
-      padding: 22px; }
+      border: 1px solid #000; }
     .community table th {
       font-weight: 400; }
     .community table tr:nth-child(even) {
-      background-color: #F2EADC; }
+      background-color: #f2eadc; }
+
+.feature-image {
+  right: 0;
+  left: 0;
+  width: 100vw;
+  height: 320px;
+  margin-left: calc(-100vw / 2 + 700px / 2);
+  padding-top: 110px;
+  text-align: center;
+  color: #f1f0e8;
+  background: #647d47 url(../optimized/background-3.jpg);
+  background-attachment: fixed;
+  background-size: cover; }
 
 #newsletter .full-page-background {
-  z-index: -1;
   position: absolute;
+  z-index: -1;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
   max-width: 100%;
+  min-height: 100vh;
+  max-height: 610px;
   object-fit: cover; }
 
 #newsletter .email-newsletter {
-  background-color: #FFFFFF;
   max-width: 610px;
-  padding: 30px;
   margin: 0 auto;
   margin-top: 50px;
-  text-align: center; }
+  padding: 30px;
+  text-align: center;
+  background-color: #FFFFFF; }
   #newsletter .email-newsletter h1 {
     font-size: 30px; }
   #newsletter .email-newsletter p {
     font-size: 26px; }
 
 input {
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid #968772;
-  margin-bottom: 26px;
   font-size: 16px;
-  padding-bottom: 8px; }
+  width: 100%;
+  margin-bottom: 26px;
+  padding-bottom: 8px;
+  border: none;
+  border-bottom: 1px solid #968772; }
   input:focus {
     border-bottom: 1px solid #967343; }
 
 button {
-  background-color: #968772;
-  color: #F2F1E8;
   padding: 18px 32px;
-  border: none; }
+  color: #F2F1E8;
+  border: none;
+  background-color: #968772; }
   button:hover {
-    background-color: #967343;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    background-color: #967343; }

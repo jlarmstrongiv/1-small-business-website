@@ -1,23 +1,24 @@
 #newsletter {
   .full-page-background {
-    z-index: -1;
     position: absolute;
+    z-index: -1;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    min-width: 100vw;
     max-width: 100%;
+    min-height: 100vh;
+    max-height: 610px;
     object-fit: cover;
   }
   .email-newsletter {
-    background-color: $navigation-background;
     max-width: 610px;
-    padding: 30px;
     margin: 0 auto;
     margin-top: 50px;
+    padding: 30px;
     text-align: center;
+    background-color: $navigation-background;
     h1 {
       font-size: 30px;
     }
@@ -27,23 +28,23 @@
   }
 }
 input {
+  font-size: 16px;
   width: 100%;
+  margin-bottom: 26px;
+  padding-bottom: 8px;
   border: none;
   border-bottom: 1px solid $input-border-bottom;
-  margin-bottom: 26px;
-  font-size: 16px;
-  padding-bottom: 8px;
   &:focus {
     border-bottom: 1px solid $input-border-bottom-focus;
   }
 }
 button {
-  background-color: $button-background;
-  color: $button-text;
   padding: 18px 32px;
+  color: $button-text;
   border: none;
+  background-color: $button-background;
   &:hover {
-    background-color:       $button-background-hover;
     color: $button-text-hover;
+    background-color: $button-background-hover;
   }
 }
